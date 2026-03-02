@@ -23,7 +23,7 @@ export function Hero() {
       {/* Sub headline */}
       <p className="mt-6 max-w-lg text-center text-base md:text-lg leading-relaxed text-muted-foreground">
         GlowLock blocks your most addictive apps until you complete a gratitude
-        reflection. Take back your days, one tape at a time.
+        reflection. Take back your days, one reflection at a time.
       </p>
 
       {/* CTA Button */}

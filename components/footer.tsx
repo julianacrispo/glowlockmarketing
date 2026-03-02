@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export function Footer() {
   return (
     <footer className="border-t border-border px-6 py-10">
@@ -19,9 +21,9 @@ export function Footer() {
         </p>
 
         <div className="flex items-center gap-6 text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-          <a href="#" className="transition-colors hover:text-foreground">Privacy</a>
-          <a href="#" className="transition-colors hover:text-foreground">Terms</a>
-          <a href="#" className="transition-colors hover:text-foreground">Support</a>
+          <Link href="/privacy" className="transition-colors hover:text-foreground">Privacy</Link>
+          <Link href="/terms" className="transition-colors hover:text-foreground">Terms</Link>
+          <Link href="/contact" className="transition-colors hover:text-foreground">Support</Link>
         </div>
 
         <p className="text-[10px] text-muted-foreground/60 tracking-wider uppercase">
