@@ -8,32 +8,43 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Email is required" }, { status: 400 })
     }
 
-    const KIT_API_KEY = process.env.KIT_API_KEY
-    const KIT_FORM_ID = process.env.KIT_FORM_ID
+    const BREVO_API_KEY = process.env.BREVO_API_KEY
+    const BREVO_LIST_ID = process.env.BREVO_LIST_ID
 
-    if (!KIT_API_KEY || !KIT_FORM_ID) {
-      console.error("Missing KIT_API_KEY or KIT_FORM_ID environment variables")
+    if (!BREVO_API_KEY || !BREVO_LIST_ID) {
+      console.error("Missing BREVO_API_KEY or BREVO_LIST_ID environment variables")
       return NextResponse.json(
         { error: "Email service not configured" },
         { status: 500 }
       )
     }
 
-    const res = await fetch(
-      `https://api.convertkit.com/v3/forms/${KIT_FORM_ID}/subscribe`,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json; charset=utf-8" },
-        body: JSON.stringify({
-          api_key: KIT_API_KEY,
-          email,
-        }),
-      }
-    )
+    const listId = Number(BREVO_LIST_ID)
+    if (Number.isNaN(listId)) {
+      console.error("BREVO_LIST_ID must be a number")
+      return NextResponse.json(
+        { error: "Email service not configured" },
+        { status: 500 }
+      )
+    }
+
+    const res = await fetch("https://api.brevo.com/v3/contacts", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+        Accept: "application/json",
+        "api-key": BREVO_API_KEY,
+      },
+      body: JSON.stringify({
+        email,
+        listIds: [listId],
+        updateEnabled: true,
+      }),
+    })
 
     if (!res.ok) {
-      const data = await res.json()
-      console.error("Kit API error:", data)
+      const data = await res.json().catch(() => null)
+      console.error("Brevo API error:", data)
       return NextResponse.json(
         { error: "Failed to subscribe. Please try again." },
         { status: 500 }
