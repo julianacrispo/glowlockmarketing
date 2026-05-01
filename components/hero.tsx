@@ -69,8 +69,8 @@ export function Hero() {
         gratitude journal entry — rewiring your brain for happiness and calm.
       </p>
 
-      {/* Dual CTAs */}
-      <div className="mt-10 flex flex-col sm:flex-row items-center gap-3">
+      {/* Primary CTA */}
+      <div className="mt-10 flex flex-col items-center gap-4">
         <a
           href="https://apps.apple.com/app/glowlock"
           className="group inline-flex items-center gap-3 rounded-lg bg-primary px-8 py-4 text-primary-foreground text-sm uppercase tracking-[0.15em] font-bold transition-all hover:bg-foreground hover:scale-[1.02] active:scale-[0.98]"
@@ -78,12 +78,15 @@ export function Hero() {
           <Apple className="h-5 w-5" />
           Get It on iOS
         </a>
-        <button
-          onClick={() => setShowModal(true)}
-          className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-8 py-4 text-sm uppercase tracking-[0.15em] font-bold text-foreground transition-all hover:bg-secondary hover:scale-[1.02] active:scale-[0.98]"
-        >
-          Join Android Waitlist
-        </button>
+        <p className="text-sm text-muted-foreground">
+          Not on iPhone?{" "}
+          <button
+            onClick={() => setShowModal(true)}
+            className="underline underline-offset-2 hover:text-foreground transition-colors"
+          >
+            Join the Android waitlist &rarr;
+          </button>
+        </p>
       </div>
 
       {/* Social proof mini */}

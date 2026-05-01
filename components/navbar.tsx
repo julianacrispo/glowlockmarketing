@@ -33,7 +33,7 @@ export function Navbar() {
             height={24}
             className=""
           />
-          <span className="text-xs uppercase tracking-[0.25em] font-bold text-foreground">
+          <span className="font-serif text-lg italic text-foreground">
             GlowLock
           </span>
         </div>

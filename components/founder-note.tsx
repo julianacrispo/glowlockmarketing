@@ -16,22 +16,23 @@ export function FounderNote() {
           </div>
 
           <div className="text-center md:text-left">
-            <p className="font-serif text-3xl italic text-foreground">Hi!</p>
+            <p className="font-serif text-3xl italic text-foreground">Hi! I&apos;m Juliana.</p>
 
             <div className="mt-4 space-y-4 text-sm leading-relaxed text-muted-foreground md:text-base">
               <p>
-                I&apos;m Juliana. GlowLock was built by me — not the 21 trillion
-                dollar big tech industry focused on stealing your attention.
+                I know what it feels like to lose hours to scrolling and feel worse after.
               </p>
               <p>
-                I struggled to stay off my phone and stay grateful for my real
-                life, so I built GlowLock to fix that. It has changed my life
-                and I hope it changes yours for the better too.
+                I built GlowLock to help me break that loop and rewire my brain toward
+                happiness instead.
+              </p>
+              <p>
+                It changed my life for the better, and I hope it is the same for you.
               </p>
             </div>
 
             <p className="mt-6 font-serif text-base italic text-foreground">
-              With Love &amp; Gratitude,
+              See you on the inside.
               <br />
               Juliana
             </p>
