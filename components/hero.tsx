@@ -49,7 +49,7 @@ export function Hero() {
           alt=""
           width={80}
           height={80}
-          className="mix-blend-multiply"
+          className=""
         />
       </div>
 

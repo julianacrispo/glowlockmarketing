@@ -45,7 +45,7 @@ export function FinalCta() {
             alt=""
             width={48}
             height={48}
-            className="mix-blend-multiply opacity-30"
+            className="opacity-30"
           />
         </div>
 

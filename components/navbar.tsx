@@ -31,7 +31,7 @@ export function Navbar() {
             alt=""
             width={24}
             height={24}
-            className="mix-blend-multiply"
+            className=""
           />
           <span className="text-xs uppercase tracking-[0.25em] font-bold text-foreground">
             GlowLock

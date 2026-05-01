@@ -12,7 +12,7 @@ export function Footer() {
             alt=""
             width={20}
             height={20}
-            className="mix-blend-multiply opacity-70"
+            className="opacity-70"
           />
           <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-muted-foreground">
             GlowLock
