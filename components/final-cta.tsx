@@ -1,7 +1,40 @@
+"use client"
+
+import { useState } from "react"
 import { Apple } from "lucide-react"
 import Image from "next/image"
 
 export function FinalCta() {
+  const [showModal, setShowModal] = useState(false)
+  const [email, setEmail] = useState("")
+  const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState("")
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
+    if (!email) return
+    setLoading(true)
+    setError("")
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      })
+      if (!res.ok) {
+        const data = await res.json()
+        throw new Error(data.error || "Something went wrong")
+      }
+      setSubmitted(true)
+      setEmail("")
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Something went wrong")
+    } finally {
+      setLoading(false)
+    }
+  }
+
   return (
     <section className="px-6 py-20 md:py-32">
       <div className="mx-auto max-w-2xl text-center">
@@ -12,7 +45,7 @@ export function FinalCta() {
             alt=""
             width={48}
             height={48}
-            className="opacity-30"
+            className="mix-blend-multiply opacity-30"
           />
         </div>
 
@@ -23,14 +56,22 @@ export function FinalCta() {
           Join hundreds who traded mindless scrolling for presence and gratitude.
         </p>
 
-        {/* iOS CTA */}
-        <a
-          href="https://apps.apple.com/app/glowlock"
-          className="group mt-8 inline-flex items-center gap-3 rounded-lg bg-primary px-10 py-5 text-primary-foreground text-sm uppercase tracking-[0.15em] font-bold transition-all hover:bg-foreground hover:scale-[1.02] active:scale-[0.98]"
-        >
-          <Apple className="h-5 w-5" />
-          Get It on iOS
-        </a>
+        {/* Dual CTAs */}
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <a
+            href="https://apps.apple.com/app/glowlock"
+            className="group inline-flex items-center gap-3 rounded-lg bg-primary px-10 py-5 text-primary-foreground text-sm uppercase tracking-[0.15em] font-bold transition-all hover:bg-foreground hover:scale-[1.02] active:scale-[0.98]"
+          >
+            <Apple className="h-5 w-5" />
+            Get It on iOS
+          </a>
+          <button
+            onClick={() => setShowModal(true)}
+            className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-10 py-5 text-sm uppercase tracking-[0.15em] font-bold text-foreground transition-all hover:bg-secondary hover:scale-[1.02] active:scale-[0.98]"
+          >
+            Join Android Waitlist
+          </button>
+        </div>
 
         {/* Social proof */}
         <div className="mt-6 flex items-center justify-center gap-2">
@@ -49,6 +90,61 @@ export function FinalCta() {
           Former doomscrollers love us
         </p>
       </div>
+
+      {/* Android Waitlist Modal */}
+      {showModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-foreground/50 backdrop-blur-sm px-4">
+          <div className="relative w-full max-w-sm rounded-xl bg-background border border-border p-8 shadow-lg">
+            <button
+              onClick={() => setShowModal(false)}
+              className="absolute top-3 right-3 text-muted-foreground hover:text-foreground text-xl leading-none"
+              aria-label="Close"
+            >
+              &times;
+            </button>
+
+            <h3 className="font-serif text-2xl italic text-foreground text-center">
+              Join the Android Waitlist
+            </h3>
+            <p className="mt-2 text-sm text-muted-foreground text-center">
+              We&apos;ll notify you as soon as GlowLock is available on Android.
+            </p>
+
+            {submitted ? (
+              <div className="mt-6 flex items-center justify-center gap-2 rounded-lg border border-accent bg-card px-4 py-3">
+                <svg className="h-4 w-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span className="text-sm text-foreground">
+                  You&apos;re on the list!
+                </span>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="mt-6 space-y-3">
+                <label htmlFor="android-email-bottom" className="sr-only">Email address</label>
+                <input
+                  id="android-email-bottom"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="you@email.com"
+                  required
+                  disabled={loading}
+                  className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-accent disabled:opacity-50"
+                />
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="w-full rounded-lg bg-primary px-4 py-3 text-xs uppercase tracking-[0.15em] font-bold text-primary-foreground transition-colors hover:bg-foreground disabled:opacity-50"
+                >
+                  {loading ? "Sending..." : "Notify Me"}
+                </button>
+                {error && <p className="text-xs text-destructive text-center">{error}</p>}
+              </form>
+            )}
+          </div>
+        </div>
+      )}
     </section>
   )
 }
