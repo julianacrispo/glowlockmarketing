@@ -1,96 +1,36 @@
-"use client"
-
-import { useState } from "react"
+import { Apple } from "lucide-react"
+import Image from "next/image"
 
 export function FinalCta() {
-  const [email, setEmail] = useState("")
-  const [submitted, setSubmitted] = useState(false)
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState("")
-
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault()
-    if (!email) return
-    setLoading(true)
-    setError("")
-    try {
-      const res = await fetch("/api/subscribe", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
-      })
-      if (!res.ok) {
-        const data = await res.json()
-        throw new Error(data.error || "Something went wrong")
-      }
-      setSubmitted(true)
-      setEmail("")
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "Something went wrong")
-    } finally {
-      setLoading(false)
-    }
-  }
-
   return (
     <section className="px-6 py-20 md:py-32">
       <div className="mx-auto max-w-2xl text-center">
-        {/* Cassette decoration */}
-        <div className="flex items-center justify-center gap-4 mb-8 opacity-30" aria-hidden="true">
-          <div className="h-px w-12 bg-border" />
-          <div className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-full border-2 border-border" />
-            <div className="h-4 w-12 bg-border rounded-sm" />
-            <div className="h-8 w-8 rounded-full border-2 border-border" />
-          </div>
-          <div className="h-px w-12 bg-border" />
+        {/* Brain icon decoration */}
+        <div className="flex justify-center mb-8">
+          <Image
+            src="/brain-icon.png"
+            alt=""
+            width={48}
+            height={48}
+            className="opacity-30"
+          />
         </div>
 
         <h2 className="font-serif text-4xl md:text-6xl italic text-foreground text-balance leading-[1.1]">
-          Take back your days, one reflection at a time.
+          Reclaim your brain, one reflection at a time.
         </h2>
         <p className="mt-4 text-sm md:text-base text-muted-foreground max-w-md mx-auto leading-relaxed">
           Join hundreds who traded mindless scrolling for presence and gratitude.
-          Your first tape is waiting.
         </p>
 
-        {/* Inline email capture */}
-        {submitted ? (
-          <div className="inline-flex items-center gap-2 rounded-lg border border-accent bg-card px-6 py-4">
-            <svg className="h-4 w-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-            <span className="text-sm text-foreground">
-              {"Check your inbox for your iOS link and trial details."}
-            </span>
-          </div>
-        ) : (
-          <>
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <label htmlFor="email-capture" className="sr-only">Email address</label>
-              <input
-                id="email-capture"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="you@email.com"
-                required
-                disabled={loading}
-                className="flex-1 rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-accent disabled:opacity-50"
-              />
-              <button
-                type="submit"
-                disabled={loading}
-                className="rounded-lg bg-primary px-6 py-3 text-xs uppercase tracking-[0.15em] font-bold text-primary-foreground transition-colors hover:bg-foreground disabled:opacity-50"
-              >
-                {loading ? "Sending..." : "Get 3 Days Free"}
-              </button>
-            </form>
-            {error && (
-              <p className="mt-2 text-xs text-destructive">{error}</p>
-            )}
-          </>
-        )}
+        {/* iOS CTA */}
+        <a
+          href="https://apps.apple.com/app/glowlock"
+          className="group mt-8 inline-flex items-center gap-3 rounded-lg bg-primary px-10 py-5 text-primary-foreground text-sm uppercase tracking-[0.15em] font-bold transition-all hover:bg-foreground hover:scale-[1.02] active:scale-[0.98]"
+        >
+          <Apple className="h-5 w-5" />
+          Get It on iOS
+        </a>
 
         {/* Social proof */}
         <div className="mt-6 flex items-center justify-center gap-2">

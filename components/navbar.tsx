@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Apple } from "lucide-react"
+import Image from "next/image"
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -25,19 +26,21 @@ export function Navbar() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <div className="flex items-center gap-1" aria-hidden="true">
-            <div className="h-5 w-5 rounded-full border-2 border-foreground" />
-            <div className="h-2.5 w-3 bg-foreground rounded-sm -mx-0.5" />
-            <div className="h-5 w-5 rounded-full border-2 border-foreground" />
-          </div>
-          <span className="text-xs uppercase tracking-[0.25em] font-bold text-foreground ml-1">
+          <Image
+            src="/brain-icon.png"
+            alt=""
+            width={24}
+            height={24}
+            className="opacity-90"
+          />
+          <span className="text-xs uppercase tracking-[0.25em] font-bold text-foreground">
             GlowLock
           </span>
         </div>
 
         {/* CTA */}
         <a
-          href="#"
+          href="https://apps.apple.com/app/glowlock"
           className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-primary-foreground text-[11px] uppercase tracking-[0.15em] font-bold transition-all hover:bg-foreground hover:scale-[1.02] active:scale-[0.98]"
         >
           <Apple className="h-3.5 w-3.5" />

@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export function Footer() {
   return (
@@ -6,12 +7,14 @@ export function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 text-center">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <div className="flex items-center gap-1" aria-hidden="true">
-            <div className="h-4 w-4 rounded-full border-[1.5px] border-muted-foreground" />
-            <div className="h-2 w-2.5 bg-muted-foreground rounded-sm -mx-0.5" />
-            <div className="h-4 w-4 rounded-full border-[1.5px] border-muted-foreground" />
-          </div>
-          <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-muted-foreground ml-1">
+          <Image
+            src="/brain-icon.png"
+            alt=""
+            width={20}
+            height={20}
+            className="opacity-70"
+          />
+          <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-muted-foreground">
             GlowLock
           </span>
         </div>
