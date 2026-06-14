@@ -397,7 +397,7 @@ export default function TermsPage() {
 
             <hr className="my-8 border-border" />
             <p className="text-center text-muted-foreground">
-              © 2025 Metrics Health International LLC. All rights reserved.
+              © 2026 Metrics Health International LLC. All rights reserved.
             </p>
           </div>
         </div>

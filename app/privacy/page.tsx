@@ -19,16 +19,18 @@ export default function PrivacyPage() {
 
       <main className="px-6 py-16">
         <div className="container mx-auto max-w-3xl">
-          <h1 className="mb-4 text-4xl font-serif">Privacy Policy for Glowlock</h1>
-          <p className="mb-8 text-muted-foreground">Last Updated: January 2026</p>
+          <h1 className="mb-4 text-4xl font-serif">Privacy Policy</h1>
+          <p className="mb-8 text-muted-foreground">Last Updated: June 14, 2026</p>
 
           <div className="space-y-8 text-foreground/90">
             <section>
               <h2 className="mb-4 text-2xl font-serif">Overview</h2>
               <p className="leading-relaxed">
-                Glowlock ("we", "our", or "the app") is a gratitude journaling app that helps you
-                build a daily mindfulness habit through voice journaling. We take your privacy
-                seriously and are committed to protecting your personal information.
+                GlowLock (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;the app&rdquo;) is a
+                screen-time and habit-change app that helps you reduce compulsive phone use. It does
+                this through customizable app-blocking shields, AI-powered habit coaching, behavioral
+                insights, and social accountability features. We take your privacy seriously and are
+                committed to protecting your personal information.
               </p>
             </section>
 
@@ -38,56 +40,126 @@ export default function PrivacyPage() {
               <h3 className="mb-3 mt-6 text-xl font-serif">1. Account Information</h3>
               <ul className="list-disc space-y-2 pl-6">
                 <li>
-                  <strong>Email address:</strong> Used to create and manage your account via
-                  Firebase Authentication
+                  <strong>Email address:</strong> Used to create and manage your account via Firebase
+                  Authentication.
                 </li>
                 <li>
-                  <strong>Authentication tokens:</strong> To keep you signed in securely
+                  <strong>Display name:</strong> A name or alias you choose, visible to friends you
+                  add on the platform.
+                </li>
+                <li>
+                  <strong>Authentication tokens:</strong> To keep you signed in securely.
                 </li>
               </ul>
 
-              <h3 className="mb-3 mt-6 text-xl font-serif">2. Journal Entries</h3>
+              <h3 className="mb-3 mt-6 text-xl font-serif">2. AI Habit Coach Conversations</h3>
               <ul className="list-disc space-y-2 pl-6">
                 <li>
-                  <strong>Voice recordings:</strong> Stored in Firebase Cloud Storage so you can
-                  replay them
+                  <strong>Messages you send to the Habit Coach:</strong> When you interact with the
+                  AI coach, your messages are sent to our server (Firebase Cloud Functions) and
+                  forwarded to Anthropic&apos;s Claude API for processing. Responses are returned to
+                  you in-app.
                 </li>
                 <li>
-                  <strong>Transcribed text:</strong> Stored in Firebase Firestore
+                  <strong>Conversation history:</strong> Stored in Firebase Firestore so the coach
+                  can maintain context across sessions.
                 </li>
                 <li>
-                  <strong>Timestamps:</strong> When entries were created
+                  Anthropic does not use your data to train its models when accessed via their API.
+                  See{" "}
+                  <a
+                    href="https://www.anthropic.com/privacy"
+                    className="text-primary hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Anthropic&apos;s Privacy Policy
+                  </a>
+                  .
                 </li>
               </ul>
 
-              <h3 className="mb-3 mt-6 text-xl font-serif">3. Subscription Information</h3>
+              <h3 className="mb-3 mt-6 text-xl font-serif">3. Shield &amp; Journal Content</h3>
+              <ul className="list-disc space-y-2 pl-6">
+                <li>
+                  <strong>Custom shield prompts:</strong> The text you write for your personalized
+                  blocking screen, stored in Firebase Firestore.
+                </li>
+                <li>
+                  <strong>Journal entries:</strong> Any reflections or notes you record within the
+                  app, stored in Firebase Firestore.
+                </li>
+                <li>
+                  <strong>Timestamps:</strong> When entries and interactions were created.
+                </li>
+              </ul>
+
+              <h3 className="mb-3 mt-6 text-xl font-serif">4. Social &amp; Accountability Data</h3>
+              <ul className="list-disc space-y-2 pl-6">
+                <li>
+                  <strong>Friends list:</strong> The users you connect with via friend codes.
+                </li>
+                <li>
+                  <strong>Shared data with friends:</strong> Your display name and total unlock time
+                  on blocked apps (in minutes) are visible to your friends. Your journal entries,
+                  coach conversations, and shield content are never shared.
+                </li>
+                <li>
+                  <strong>Friend codes:</strong> Unique codes used to establish connections.
+                </li>
+              </ul>
+
+              <h3 className="mb-3 mt-6 text-xl font-serif">5. Usage &amp; Behavioral Insights</h3>
+              <ul className="list-disc space-y-2 pl-6">
+                <li>
+                  <strong>Shield deflection events:</strong> How often your shield successfully
+                  prevented you from opening a blocked app.
+                </li>
+                <li>
+                  <strong>Unlock time:</strong> Total time spent in blocked apps after choosing to
+                  proceed through the shield.
+                </li>
+                <li>
+                  <strong>Emotional tagging:</strong> If you tag why you opened an app (e.g.,
+                  boredom, anxiety), this is stored to generate your personal insights.
+                </li>
+                <li>
+                  <strong>Analytics:</strong> We use Firebase Analytics to understand app usage
+                  patterns, feature engagement, and crashes. This may include device type, OS
+                  version, and session duration.
+                </li>
+              </ul>
+
+              <h3 className="mb-3 mt-6 text-xl font-serif">6. Subscription Information</h3>
               <ul className="list-disc space-y-2 pl-6">
                 <li>
                   <strong>Purchase history:</strong> Managed through RevenueCat to provide premium
-                  features
+                  features and manage your subscription status.
                 </li>
                 <li>
-                  We do not store your payment details directly; these are handled by Apple
+                  We do not store your payment details directly; these are handled by Apple.
                 </li>
               </ul>
 
-              <h3 className="mb-3 mt-6 text-xl font-serif">4. App Blocking Preferences</h3>
+              <h3 className="mb-3 mt-6 text-xl font-serif">7. App Blocking Preferences</h3>
               <ul className="list-disc space-y-2 pl-6">
                 <li>
                   <strong>Selected apps to block:</strong> This information stays entirely on your
-                  device using Apple's Screen Time API
+                  device using Apple&apos;s Screen Time / Family Controls API.
                 </li>
-                <li>We cannot see which apps you choose to block</li>
+                <li>We cannot see which specific apps you choose to block.</li>
               </ul>
             </section>
 
             <section>
               <h2 className="mb-4 text-2xl font-serif">How We Use Your Information</h2>
               <ul className="list-disc space-y-2 pl-6">
-                <li>To provide and improve the journaling experience</li>
-                <li>To transcribe your voice recordings into text using OpenAI's Whisper API</li>
-                <li>To sync your journal entries across your devices</li>
+                <li>To provide the AI Habit Coach experience (processing your messages via Anthropic&apos;s Claude API)</li>
+                <li>To generate personalized behavioral insights (e.g., which emotions drive your scrolling)</li>
+                <li>To enable social accountability features (sharing unlock time with friends)</li>
+                <li>To sync your shield configuration and journal entries across your devices</li>
                 <li>To manage your subscription status</li>
+                <li>To improve app performance and fix bugs via analytics</li>
                 <li>To provide customer support</li>
               </ul>
             </section>
@@ -97,7 +169,8 @@ export default function PrivacyPage() {
               <p className="mb-4 leading-relaxed">We use the following third-party services:</p>
               <ul className="list-disc space-y-2 pl-6">
                 <li>
-                  <strong>Firebase (Google):</strong> Authentication and data storage -{" "}
+                  <strong>Firebase (Google):</strong> Authentication, Firestore database, Cloud
+                  Functions, and Analytics &mdash;{" "}
                   <a
                     href="https://firebase.google.com/support/privacy"
                     className="text-primary hover:underline"
@@ -108,7 +181,20 @@ export default function PrivacyPage() {
                   </a>
                 </li>
                 <li>
-                  <strong>RevenueCat:</strong> Subscription management -{" "}
+                  <strong>Anthropic (Claude API):</strong> Powers the AI Habit Coach. Your coach
+                  messages are sent to Anthropic for processing. Anthropic does not use API data to
+                  train models &mdash;{" "}
+                  <a
+                    href="https://www.anthropic.com/privacy"
+                    className="text-primary hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Anthropic Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <strong>RevenueCat:</strong> Subscription and purchase management &mdash;{" "}
                   <a
                     href="https://www.revenuecat.com/privacy"
                     className="text-primary hover:underline"
@@ -119,7 +205,8 @@ export default function PrivacyPage() {
                   </a>
                 </li>
                 <li>
-                  <strong>Apple Screen Time API:</strong> App blocking (on-device only) -{" "}
+                  <strong>Apple Screen Time / Family Controls API:</strong> App blocking (on-device
+                  only, no data leaves your device) &mdash;{" "}
                   <a
                     href="https://www.apple.com/privacy"
                     className="text-primary hover:underline"
@@ -135,14 +222,41 @@ export default function PrivacyPage() {
             <section>
               <h2 className="mb-4 text-2xl font-serif">Data Storage &amp; Security</h2>
               <ul className="list-disc space-y-2 pl-6">
-                <li>Your journal entries (text) are stored securely in Firebase Firestore</li>
                 <li>
-                  Voice recordings are stored in Firebase Cloud Storage so you can replay them
+                  Account data, coach conversations, journal entries, shield content, and social
+                  connections are stored securely in Firebase Firestore.
                 </li>
-                <li>All data is transmitted securely via HTTPS and encrypted at rest</li>
+                <li>All data is transmitted via HTTPS and encrypted at rest.</li>
                 <li>
-                  App blocking preferences remain on your device and are never transmitted to us
+                  App-blocking preferences remain on your device via Apple&apos;s APIs and are never
+                  transmitted to our servers.
                 </li>
+                <li>
+                  AI coach messages are transmitted to Anthropic over encrypted connections and are
+                  not retained by Anthropic beyond the request window (per their API data policy).
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="mb-4 text-2xl font-serif">Data Shared with Other Users</h2>
+              <p className="leading-relaxed">
+                If you use the Friends feature, the following is visible to users you have added as
+                friends:
+              </p>
+              <ul className="mt-4 list-disc space-y-2 pl-6">
+                <li>Your display name</li>
+                <li>Your total unlock time on blocked apps (in minutes, per day)</li>
+              </ul>
+              <p className="mt-4 leading-relaxed">
+                The following is <strong>never</strong> shared with friends or other users:
+              </p>
+              <ul className="mt-4 list-disc space-y-2 pl-6">
+                <li>Your journal entries</li>
+                <li>Your AI coach conversations</li>
+                <li>Your shield content</li>
+                <li>Which specific apps you block</li>
+                <li>Your emotional tags or insights data</li>
               </ul>
             </section>
 
@@ -151,10 +265,20 @@ export default function PrivacyPage() {
               <p className="mb-4 leading-relaxed">You can:</p>
               <ul className="list-disc space-y-2 pl-6">
                 <li>
-                  <strong>Access</strong> your data by viewing your journal entries in the app
+                  <strong>Access</strong> your data by viewing your journal entries, coach history,
+                  and insights within the app.
                 </li>
                 <li>
-                  <strong>Delete</strong> individual entries within the app
+                  <strong>Delete</strong> individual entries, conversations, or your entire account
+                  within the app.
+                </li>
+                <li>
+                  <strong>Remove friends</strong> at any time, which immediately revokes their access
+                  to your unlock-time data.
+                </li>
+                <li>
+                  <strong>Request a full data export or deletion</strong> by contacting us at the
+                  email below.
                 </li>
               </ul>
             </section>
@@ -163,33 +287,42 @@ export default function PrivacyPage() {
               <h2 className="mb-4 text-2xl font-serif">Data Retention</h2>
               <ul className="list-disc space-y-2 pl-6">
                 <li>
-                  Journal entries and voice recordings are retained until you delete them or your
-                  account
+                  Journal entries, coach conversations, and insights data are retained until you
+                  delete them or delete your account.
                 </li>
-                <li>Account data is deleted when you delete your account</li>
+                <li>
+                  Account data is permanently deleted when you delete your account.
+                </li>
+                <li>
+                  Analytics data is retained in aggregate form and cannot be tied back to you after
+                  account deletion.
+                </li>
               </ul>
             </section>
 
             <section>
               <h2 className="mb-4 text-2xl font-serif">Children&apos;s Privacy</h2>
               <p className="leading-relaxed">
-                Glowlock is not intended for children under 13. We do not knowingly collect
-                information from children under 13.
+                GlowLock is not intended for children under 13. We do not knowingly collect
+                information from children under 13. If you believe a child under 13 has provided us
+                with personal information, please contact us immediately.
               </p>
             </section>
 
             <section>
               <h2 className="mb-4 text-2xl font-serif">Changes to This Policy</h2>
               <p className="leading-relaxed">
-                We may update this privacy policy from time to time. We will notify you of any
-                changes by posting the new policy in the app or on our website.
+                We may update this privacy policy from time to time. We will notify you of material
+                changes by posting the updated policy in the app or on our website with a revised
+                &ldquo;Last Updated&rdquo; date.
               </p>
             </section>
 
             <section>
               <h2 className="mb-4 text-2xl font-serif">Contact Us</h2>
               <p className="leading-relaxed">
-                If you have questions about this privacy policy or your data, please contact us at:
+                If you have questions about this privacy policy, your data, or wish to exercise your
+                rights, please contact us at:
               </p>
               <p className="mt-2 leading-relaxed">
                 <strong>Email:</strong>{" "}
@@ -201,7 +334,7 @@ export default function PrivacyPage() {
 
             <hr className="my-8 border-border" />
             <p className="text-center text-muted-foreground">
-              © 2025 Metrics Health International LLC. All rights reserved.
+              © 2026 Metrics Health International LLC. All rights reserved.
             </p>
           </div>
         </div>
