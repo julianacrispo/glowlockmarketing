@@ -4,22 +4,22 @@ import Image from "next/image"
 
 const screenshots = [
   {
-    src: "/block-screenshot.png",
-    alt: "GlowLock blocking screen - You're reclaiming your brain from the scroll",
-    label: "BLOCK",
-    description: "No willpower required. GlowLock will block the apps you struggle with most.",
+    src: "/screenshot-shield.png",
+    alt: "GlowLock customizable shield with prompts like 'Was that the plan?' and 'Nothing here will fix how you feel'",
+    label: "PAUSE",
+    description: "Your personalized shield creates the pause you need. Customize the prompts that remind you why you're here.",
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_1438.PNG-VKjh4et6xF1jUtEtXR1oXbiaWocs6f.png",
-    alt: "GlowLock gratitude recording interface with cassette tape UI",
+    src: "/screenshot-insights.png",
+    alt: "GlowLock insights showing emotions driving your opens and scroll patterns",
+    label: "UNDERSTAND",
+    description: "See which emotions drive your scrolling. Unlock real insights into your patterns after your first week.",
+  },
+  {
+    src: "/screenshot-coach.png",
+    alt: "GlowLock habit coach asking 'What are you trying to avoid right now?'",
     label: "REWIRE",
-    description: "Redirect the scrolling impulse to a moment of gratitude. Rewiring your brain for introspection and positivity.",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_1442.PNG-KDwygADZPOKKJy0LJguzYk1zercarN.jpeg",
-    alt: "GlowLock growth stats showing days of life saved and sessions avoided",
-    label: "GROW",
-    description: "Stay motivated by viewing your progress in real time. Add friends for more accountability.",
+    description: "Get expert guidance from a habit coach grounded in psychology. Break the loop for good.",
   },
 ]
 
@@ -33,7 +33,7 @@ export function AppShowcase() {
             --- How It Works ---
           </p>
           <h2 className="font-serif text-3xl md:text-5xl italic text-foreground text-balance">
-            Three steps to reclaim your brain
+            Built on what actually works in habit science
           </h2>
         </div>
 

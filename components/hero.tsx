@@ -56,17 +56,17 @@ export function Hero() {
       {/* Main headline */}
       <h1 className="text-center max-w-4xl">
         <span className="block font-serif text-5xl md:text-7xl lg:text-8xl leading-[1.1] text-foreground text-balance italic">
-          Reclaim your brain.
+          Understand why you scroll.
         </span>
         <span className="block font-serif text-3xl md:text-4xl lg:text-5xl leading-[1.2] text-foreground text-balance italic mt-2">
-          One reflection at a time.
+          Then change it.
         </span>
       </h1>
 
       {/* Sub headline */}
       <p className="mt-6 max-w-lg text-center text-base md:text-lg leading-relaxed text-muted-foreground">
-        GlowLock blocks you from mindlessly scrolling until you complete a
-        gratitude journal entry — rewiring your brain for happiness and calm.
+        GlowLock shields you from compulsive scrolling, reveals the emotions driving
+        your habits, and helps you build the pause that rewires your behavior.
       </p>
 
       {/* Primary CTA */}

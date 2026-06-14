@@ -4,15 +4,15 @@ export function WhySection() {
       <div className="mx-auto max-w-4xl">
         <div className="text-center mb-12 md:mb-16">
           <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">
-            --- The Problem ---
+            --- The Science ---
           </p>
           <h2 className="font-serif text-3xl md:text-5xl italic text-foreground text-balance leading-[1.15]">
-            You pick up your phone 96 times a day
+            Willpower doesn&apos;t work. Systems do.
           </h2>
           <p className="mt-4 text-sm md:text-base text-muted-foreground max-w-lg mx-auto leading-relaxed">
-            The average person spends 2 hours and 31 minutes daily on social media. That
-            is 38 days every year, gone. What if you could trade even a fraction of that
-            for something that actually fills you up?
+            GlowLock is built on proven principles of habit formation psychology —
+            implementation intentions, identity reinforcement, and the power of a
+            pause before compulsive action.
           </p>
         </div>
 
@@ -21,15 +21,15 @@ export function WhySection() {
           <div className="rounded-lg border border-border bg-background p-6 flex flex-col items-center text-center gap-3">
             <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-secondary border border-border shadow-[2px_3px_0px_0px] shadow-border">
               <svg className="h-6 w-6 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
             <h3 className="text-xs uppercase tracking-[0.2em] font-bold text-foreground">
-              No Willpower Needed
+              The Pause
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              GlowLock intercepts the habit loop automatically. Your addictive apps
-              are locked until gratitude is complete.
+              A brief interruption before compulsive action is all it takes to break
+              the autopilot loop. Your shield creates that moment.
             </p>
           </div>
 
@@ -37,15 +37,15 @@ export function WhySection() {
           <div className="rounded-lg border border-border bg-background p-6 flex flex-col items-center text-center gap-3">
             <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-secondary border border-border shadow-[2px_3px_0px_0px] shadow-border">
               <svg className="h-6 w-6 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" />
               </svg>
             </div>
             <h3 className="text-xs uppercase tracking-[0.2em] font-bold text-foreground">
-              Voice, Not Text
+              Real Insights
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Speaking gratitude out loud rewires your brain faster than typing.
-              It takes 30 seconds and it is deeply personal.
+              See which emotions drive you to scroll. When you understand the why,
+              you can finally change the behavior.
             </p>
           </div>
 
@@ -53,15 +53,15 @@ export function WhySection() {
           <div className="rounded-lg border border-border bg-background p-6 flex flex-col items-center text-center gap-3">
             <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-secondary border border-border shadow-[2px_3px_0px_0px] shadow-border">
               <svg className="h-6 w-6 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
               </svg>
             </div>
             <h3 className="text-xs uppercase tracking-[0.2em] font-bold text-foreground">
-              Watch Yourself Grow
+              Identity Shift
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Track days of life saved, scroll sessions avoided, and listen back
-              to your gratitude tapes as your collection grows.
+              Your shield reinforces who you want to be. Over time, &ldquo;I don&apos;t
+              scroll&rdquo; becomes part of your identity — not a rule you force.
             </p>
           </div>
         </div>

@@ -62,7 +62,7 @@ export function StatsBar() {
           <div className="flex flex-col items-center gap-2">
             <AnimatedNumber target={12000} suffix="+" />
             <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-muted-foreground">
-              Gratitude Tapes Recorded
+              Shields Activated
             </span>
           </div>
           <div className="flex flex-col items-center gap-2">

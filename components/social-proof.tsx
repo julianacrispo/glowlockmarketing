@@ -3,17 +3,17 @@
 const reviews = [
   {
     name: "Sarah M.",
-    text: "I used to open Instagram 40+ times a day. Now I start every morning with gratitude. The cassette tape metaphor is genius.",
+    text: "I used to open Instagram 40+ times a day without thinking. The shield makes me pause and ask myself why. My screen time dropped by half.",
     rating: 5,
   },
   {
     name: "Jake T.",
-    text: "Finally an app that actually helps me stop scrolling. The voice recording feels so much more real than typing. Life-changing.",
+    text: "The insights blew my mind. I didn't realize I scroll most when I'm anxious. Now I catch it before it happens.",
     rating: 5,
   },
   {
     name: "Priya K.",
-    text: "My screen time dropped by 3 hours in the first week. The retro aesthetic makes me actually enjoy the process.",
+    text: "My screen time dropped by 3 hours in the first week. The customizable shield messages actually make me think twice.",
     rating: 5,
   },
   {
@@ -23,12 +23,12 @@ const reviews = [
   },
   {
     name: "Emily R.",
-    text: "I love replaying my old gratitude tapes when I am feeling down. It is like a journal you can listen to. Beautiful concept.",
+    text: "The habit coach asked me what I was avoiding and it hit me. This is therapy disguised as a phone app. Love it.",
     rating: 5,
   },
   {
     name: "David W.",
-    text: "The growth dashboard showing days of life saved hits different. Seeing that number go up is more satisfying than any feed.",
+    text: "Adding my friends for accountability was the game changer. Knowing they can see my unlock time keeps me honest.",
     rating: 5,
   },
 ]

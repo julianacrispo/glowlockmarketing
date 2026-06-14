@@ -10,23 +10,21 @@ export function TapeLibrary() {
           {/* Left: text content */}
           <div className="flex flex-col gap-6">
             <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
-              --- Your Tape Library ---
+              --- Accountability ---
             </p>
             <h2 className="font-serif text-3xl md:text-5xl italic text-foreground text-balance leading-[1.15]">
-              Every day becomes a tape worth keeping
+              You don&apos;t have to do it alone
             </h2>
             <p className="text-sm md:text-base leading-relaxed text-muted-foreground max-w-md">
-              Each reflection is recorded as a cassette tape. Build a library
-              celebrating your life. Replay them when you need a reminder of
-              what matters most.
+              Add friends for accountability. They can only see how much time you
+              spent on blocked apps — your journal entries stay completely private.
             </p>
 
-            {/* Feature list styled as keyboard keys */}
             <div className="flex flex-col gap-3 mt-4">
               {[
-                "Voice-recorded gratitude entries",
-                "Organized by month, like a mixtape collection",
-                "Replay your favorite tapes anytime",
+                "Choose exactly which apps to block",
+                "Add friends for social accountability",
+                "Track your progress together",
               ].map((feature) => (
                 <div key={feature} className="flex items-center gap-3">
                   <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-card border border-border shadow-[1px_2px_0px_0px] shadow-border">
@@ -40,13 +38,13 @@ export function TapeLibrary() {
             </div>
           </div>
 
-          {/* Right: Play screen screenshot */}
+          {/* Right: Friends screenshot */}
           <div className="relative w-full max-w-[320px] mx-auto lg:mx-0 lg:ml-auto">
             <div className="relative rounded-[2rem] border-2 border-border bg-card p-2 shadow-lg overflow-hidden">
               <div className="rounded-[1.5rem] overflow-hidden">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/play%20screen-VSAYry9BvJAcWMO3EeMwxbabFoTEDf.png"
-                  alt="GlowLock Play screen showing cassette tape library of gratitude recordings organized by date"
+                  src="/screenshot-friends.png"
+                  alt="GlowLock friends leaderboard showing accountability partners"
                   width={390}
                   height={844}
                   className="w-full h-auto"

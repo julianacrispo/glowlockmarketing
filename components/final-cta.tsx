@@ -50,10 +50,10 @@ export function FinalCta() {
         </div>
 
         <h2 className="font-serif text-4xl md:text-6xl italic text-foreground text-balance leading-[1.1]">
-          Reclaim your brain, one reflection at a time.
+          Stop scrolling on autopilot.
         </h2>
         <p className="mt-4 text-sm md:text-base text-muted-foreground max-w-md mx-auto leading-relaxed">
-          Join hundreds who traded mindless scrolling for presence and gratitude.
+          Join hundreds who broke the compulsive scroll loop and took back their time.
         </p>
 
         {/* Primary CTA */}
