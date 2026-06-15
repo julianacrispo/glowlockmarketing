@@ -26,7 +26,7 @@ export function Footer() {
         <div className="flex items-center gap-6 text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
           <Link href="/privacy" className="transition-colors hover:text-foreground">Privacy</Link>
           <Link href="/terms" className="transition-colors hover:text-foreground">Terms</Link>
-          <Link href="/contact" className="transition-colors hover:text-foreground">Support</Link>
+          <Link href="/support" className="transition-colors hover:text-foreground">Support</Link>
         </div>
 
         <p className="text-[10px] text-muted-foreground/60 tracking-wider uppercase">

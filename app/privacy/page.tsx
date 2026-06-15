@@ -20,7 +20,7 @@ export default function PrivacyPage() {
       <main className="px-6 py-16">
         <div className="container mx-auto max-w-3xl">
           <h1 className="mb-4 text-4xl font-serif">Privacy Policy</h1>
-          <p className="mb-8 text-muted-foreground">Last Updated: June 14, 2026</p>
+          <p className="mb-8 text-muted-foreground">Last Updated: June 15, 2026</p>
 
           <div className="space-y-8 text-foreground/90">
             <section>
@@ -31,6 +31,10 @@ export default function PrivacyPage() {
                 this through customizable app-blocking shields, AI-powered habit coaching, behavioral
                 insights, and social accountability features. We take your privacy seriously and are
                 committed to protecting your personal information.
+              </p>
+              <p className="mt-4 leading-relaxed">
+                GlowLock is operated by Metrics Health International LLC. This policy describes what
+                data we collect, how we use it, and your choices.
               </p>
             </section>
 
@@ -79,18 +83,15 @@ export default function PrivacyPage() {
                 </li>
               </ul>
 
-              <h3 className="mb-3 mt-6 text-xl font-serif">3. Shield &amp; Journal Content</h3>
+              <h3 className="mb-3 mt-6 text-xl font-serif">3. Shield Content</h3>
               <ul className="list-disc space-y-2 pl-6">
                 <li>
                   <strong>Custom shield prompts:</strong> The text you write for your personalized
-                  blocking screen, stored in Firebase Firestore.
+                  blocking screen (e.g., reminders and prompts shown before opening a blocked app),
+                  stored in Firebase Firestore.
                 </li>
                 <li>
-                  <strong>Journal entries:</strong> Any reflections or notes you record within the
-                  app, stored in Firebase Firestore.
-                </li>
-                <li>
-                  <strong>Timestamps:</strong> When entries and interactions were created.
+                  <strong>Timestamps:</strong> When shield content was created or updated.
                 </li>
               </ul>
 
@@ -100,12 +101,11 @@ export default function PrivacyPage() {
                   <strong>Friends list:</strong> The users you connect with via friend codes.
                 </li>
                 <li>
-                  <strong>Shared data with friends:</strong> Your display name and total unlock time
-                  on blocked apps (in minutes) are visible to your friends. Your journal entries,
-                  coach conversations, and shield content are never shared.
+                  <strong>Friend codes:</strong> Unique codes used to establish connections.
                 </li>
                 <li>
-                  <strong>Friend codes:</strong> Unique codes used to establish connections.
+                  <strong>Shared data with friends:</strong> Your display name and daily unlock time
+                  on blocked apps (in minutes) are visible to your friends.
                 </li>
               </ul>
 
@@ -120,8 +120,8 @@ export default function PrivacyPage() {
                   proceed through the shield.
                 </li>
                 <li>
-                  <strong>Emotional tagging:</strong> If you tag why you opened an app (e.g.,
-                  boredom, anxiety), this is stored to generate your personal insights.
+                  <strong>Emotional tags:</strong> If you tag why you opened an app (e.g., boredom,
+                  anxiety), this is stored to generate your personal insights.
                 </li>
                 <li>
                   <strong>Analytics:</strong> We use Firebase Analytics to understand app usage
@@ -152,12 +152,21 @@ export default function PrivacyPage() {
             </section>
 
             <section>
+              <h2 className="mb-4 text-2xl font-serif">What We Do Not Collect</h2>
+              <ul className="list-disc space-y-2 pl-6">
+                <li>We do not collect audio recordings or voice data.</li>
+                <li>We do not collect journal entries or transcribed text from voice input.</li>
+                <li>We do not store your payment card or billing details.</li>
+              </ul>
+            </section>
+
+            <section>
               <h2 className="mb-4 text-2xl font-serif">How We Use Your Information</h2>
               <ul className="list-disc space-y-2 pl-6">
                 <li>To provide the AI Habit Coach experience (processing your messages via Anthropic&apos;s Claude API)</li>
                 <li>To generate personalized behavioral insights (e.g., which emotions drive your scrolling)</li>
-                <li>To enable social accountability features (sharing unlock time with friends)</li>
-                <li>To sync your shield configuration and journal entries across your devices</li>
+                <li>To enable social accountability features (sharing daily unlock time with friends)</li>
+                <li>To sync your shield configuration across your devices</li>
                 <li>To manage your subscription status</li>
                 <li>To improve app performance and fix bugs via analytics</li>
                 <li>To provide customer support</li>
@@ -223,7 +232,7 @@ export default function PrivacyPage() {
               <h2 className="mb-4 text-2xl font-serif">Data Storage &amp; Security</h2>
               <ul className="list-disc space-y-2 pl-6">
                 <li>
-                  Account data, coach conversations, journal entries, shield content, and social
+                  Account data, coach conversations, shield content, behavioral insights, and social
                   connections are stored securely in Firebase Firestore.
                 </li>
                 <li>All data is transmitted via HTTPS and encrypted at rest.</li>
@@ -246,39 +255,41 @@ export default function PrivacyPage() {
               </p>
               <ul className="mt-4 list-disc space-y-2 pl-6">
                 <li>Your display name</li>
-                <li>Your total unlock time on blocked apps (in minutes, per day)</li>
+                <li>Your daily unlock time on blocked apps (in minutes)</li>
               </ul>
               <p className="mt-4 leading-relaxed">
                 The following is <strong>never</strong> shared with friends or other users:
               </p>
               <ul className="mt-4 list-disc space-y-2 pl-6">
-                <li>Your journal entries</li>
                 <li>Your AI coach conversations</li>
-                <li>Your shield content</li>
-                <li>Which specific apps you block</li>
+                <li>Your shield content and custom prompts</li>
                 <li>Your emotional tags or insights data</li>
+                <li>Which specific apps you block</li>
               </ul>
             </section>
 
             <section>
-              <h2 className="mb-4 text-2xl font-serif">Your Rights</h2>
+              <h2 className="mb-4 text-2xl font-serif">Your Rights &amp; Account Deletion</h2>
               <p className="mb-4 leading-relaxed">You can:</p>
               <ul className="list-disc space-y-2 pl-6">
                 <li>
-                  <strong>Access</strong> your data by viewing your journal entries, coach history,
-                  and insights within the app.
+                  <strong>Access</strong> your data by viewing your coach history and insights within
+                  the app.
                 </li>
                 <li>
-                  <strong>Delete</strong> individual entries, conversations, or your entire account
-                  within the app.
+                  <strong>Delete your account</strong> at any time in the app via Settings &rarr;
+                  Delete Account. This permanently removes your account data from our servers.
                 </li>
                 <li>
                   <strong>Remove friends</strong> at any time, which immediately revokes their access
                   to your unlock-time data.
                 </li>
                 <li>
-                  <strong>Request a full data export or deletion</strong> by contacting us at the
-                  email below.
+                  <strong>Request a full data export or deletion</strong> by contacting us at{" "}
+                  <a href="mailto:julianacrispo@gmail.com" className="text-primary hover:underline">
+                    julianacrispo@gmail.com
+                  </a>
+                  .
                 </li>
               </ul>
             </section>
@@ -287,11 +298,12 @@ export default function PrivacyPage() {
               <h2 className="mb-4 text-2xl font-serif">Data Retention</h2>
               <ul className="list-disc space-y-2 pl-6">
                 <li>
-                  Journal entries, coach conversations, and insights data are retained until you
+                  Coach conversations, shield content, and insights data are retained until you
                   delete them or delete your account.
                 </li>
                 <li>
-                  Account data is permanently deleted when you delete your account.
+                  Account data is permanently deleted when you delete your account via Settings
+                  &rarr; Delete Account.
                 </li>
                 <li>
                   Analytics data is retained in aggregate form and cannot be tied back to you after
@@ -324,11 +336,14 @@ export default function PrivacyPage() {
                 If you have questions about this privacy policy, your data, or wish to exercise your
                 rights, please contact us at:
               </p>
-              <p className="mt-2 leading-relaxed">
+              <p className="mt-4 leading-relaxed">
                 <strong>Email:</strong>{" "}
                 <a href="mailto:julianacrispo@gmail.com" className="text-primary hover:underline">
                   julianacrispo@gmail.com
                 </a>
+              </p>
+              <p className="mt-2 leading-relaxed">
+                <strong>Company:</strong> Metrics Health International LLC
               </p>
             </section>
 

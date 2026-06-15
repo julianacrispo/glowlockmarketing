@@ -17,9 +17,9 @@ const instrumentSerif = Instrument_Serif({
 })
 
 export const metadata: Metadata = {
-  title: 'GlowLock - Glow Before You Scroll',
+  title: 'GlowLock — Understand Why You Scroll',
   description:
-    'GlowLock blocks your most addictive apps until you complete a gratitude reflection. Take back your mornings. 96+ five-star reviews on iOS.',
+    'GlowLock shields you from compulsive scrolling, reveals the emotions driving your habits, and helps you build the pause that rewires your behavior. 96+ five-star reviews on iOS.',
   generator: 'v0.app',
   icons: {
     icon: [

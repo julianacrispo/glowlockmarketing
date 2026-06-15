@@ -23,7 +23,7 @@ const reviews = [
   },
   {
     name: "Emily R.",
-    text: "The habit coach asked me what I was avoiding and it hit me. This is therapy disguised as a phone app. Love it.",
+    text: "The habit coach asked me what I was avoiding and it hit me. It helped me see my patterns in a way I never had before. Love it.",
     rating: 5,
   },
   {

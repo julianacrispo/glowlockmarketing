@@ -16,8 +16,8 @@ export function TapeLibrary() {
               You don&apos;t have to do it alone
             </h2>
             <p className="text-sm md:text-base leading-relaxed text-muted-foreground max-w-md">
-              Add friends for accountability. They can only see how much time you
-              spent on blocked apps — your journal entries stay completely private.
+              Add friends for accountability. They only see how much time you spent on blocked apps
+              today — your coach conversations, shield messages, and insights stay private.
             </p>
 
             <div className="flex flex-col gap-3 mt-4">
